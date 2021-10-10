@@ -3,18 +3,19 @@ package StopWatch;
 public class Main {
     public static void main(String[] args) {
         StopWatch watch = new StopWatch();
-        SelectionSort ob = new SelectionSort();
+        SelectionSort obj = new SelectionSort();
         int[] arr = new int[100000];
         for (int i = 0; i < arr.length; i++) {
             arr[i]=arr.length-i;
         }
+//        Thay vì dùng hàm sort có thể dùng cách thủ công như trong class SelectionSort
         System.out.println("Mảng ban đầu:");
-        ob.printArray(arr);
+        obj.printArray(arr);
         watch.start();
-        ob.sort(arr);
+        obj.sort(arr);
         watch.stop();
         System.out.println("Mảng sau khi sắp xếp:");
-        ob.printArray(arr);
+        obj.printArray(arr);
         System.out.println("Thời gian thực thi thuật toán :" + watch.getElapsedTime() + " second");
     }
 }
